@@ -1,0 +1,212 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #00b4d8;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #8892b0;
+    font-size: 18px;
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00b4d8;
+}
+
+/* Version Display */
+.version {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2a9d8f;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #8892b0;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0077b6 0%, #023e8a 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 119, 182, 0.3);
+}
+
+/* Lists */
+.features, .steps {
+    list-style: none;
+}
+
+.features li, .steps li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 16px;
+}
+
+.features li:last-child, .steps li:last-child {
+    border-bottom: none;
+}
+
+.steps {
+    counter-reset: step-counter;
+}
+
+.steps li {
+    counter-increment: step-counter;
+    padding-left: 40px;
+    position: relative;
+}
+
+.steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0077b6;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Code inline */
+code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+/* Table */
+.versions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.versions-table th,
+.versions-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.versions-table th {
+    color: #00b4d8;
+    font-weight: 600;
+}
+
+.versions-table a {
+    color: #2a9d8f;
+    text-decoration: none;
+}
+
+.versions-table a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #8892b0;
+}
+
+footer a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+    
+    .version {
+        font-size: 36px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
